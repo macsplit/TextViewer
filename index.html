@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Viewer</title>    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="default.min.css">
+    <link rel="stylesheet" href="dark.min.css">
+    <script src="highlight.min.js"></script>    
+  </head>
+  <body>
+  	<input id="file-upload" type="file"/>
+  	<div id="menu">
+  		<div class="menu">
+  			<label class="label" id="upload" for="file-upload"><span>▲</span><u>Open</u></label>
+  		</div> 	
+  		<div class="menu">
+  			<label class="label disabled" id="close"><span>✖</span><u>Close</u></label>
+  		</div>
+  		<div class="menu">
+  			<label class="label disabled" id="download"><span>▼</span><u>Download</u></label>
+  		</div>
+      <div class="menu">
+        <label class="label disabled" id="print"><span>↯</span><u>Print</u></label>
+      </div>
+  	</div>  	
+  	<div id="container"><pre><code id="inner-code"></code></pre></div>
+  	<script src="index.js"></script>
+  </body>
+</html>

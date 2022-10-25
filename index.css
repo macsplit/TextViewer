@@ -1,0 +1,112 @@
+html, body {
+	margin: 0;	
+	background-color: ##303030;
+	color: #ddd;	
+}
+
+.label {
+	color: #442;
+}
+.label.disabled {
+	color: #774;
+}
+
+@media (prefers-color-scheme: dark) { 
+	html, body {
+		background-color: #303030;
+	}
+	.label {
+		color: #dd8;
+	}
+	.label.disabled {
+		color: #774;
+	}
+}
+
+@media (prefers-color-scheme: light) { 
+	html, body {
+		background-color: #f3f3f3;
+	}
+	.label {
+		color: #663;
+	}
+	.label.disabled {
+		color: #bb9;
+	}
+}
+
+.label {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#file-upload {
+	display: none;
+}
+
+#menu {
+	width: 100%;
+	margin: 0;
+	display: flex;
+}
+
+.menu {
+	display: inline-block;	
+	flex:  1 0;
+	text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+	label > span {
+		padding-right: 0.5em;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+  label > u {
+  	display: none;
+  }
+  label > span {
+  	font-size: 32pt;  	
+  }
+}
+
+@media screen {
+	.label, #container, pre, code {
+		font-family: monospace;
+		white-space: pre-wrap;
+		font-size: 16pt;
+	}
+	body {
+		padding: 5%;
+	}
+	#container {
+		margin:  0;
+		width: 100%;
+		word-wrap: break-word;	
+	}
+}
+
+@media print {
+	* {
+		background-color: white!important;				
+	}
+	#menu {
+		display: none;
+	}
+	#container, pre, code {
+		font-family: monospace;
+		white-space: pre-wrap;
+		font-size: 11pt;
+	}
+	body {
+		padding: 0;
+	}
+	#container {
+		margin:  0;
+		width: 100%;
+		word-wrap: break-word;	
+	}
+}
