@@ -2,6 +2,13 @@ var loaded = false;
 var type = "";
 var filename = "";
 
+function escapeCode(text){
+  textnode = document.createTextNode(text);
+  let el = document.createElement('p');
+  el.appendChild(textnode);
+  return el.innerHTML;
+}
+
 $("#file-upload").change( (e)=> {
 	let file = e.target.files[0];
   type = file.type;
@@ -11,7 +18,7 @@ $("#file-upload").change( (e)=> {
   text = event.target.result;
     let ext = filename.split('.').pop(); 
     let lang = detect(type, ext);
-    html =  (lang) ? (hljs.highlight(text, {language: lang})).value : text;
+    html =  (lang) ? (hljs.highlight(text, {language: lang})).value : escapeCode(text);
     $("#inner-code").html(html);
     $("#close,#download,#print").removeClass("disabled");
     document.title = filename;
@@ -112,6 +119,8 @@ function detect(mime, ext) {
       return 'shell';
     case 'application/sql':
       return 'sql';
+    case 'text/xml':
+      return 'xml';
     case 'text/plain':
     default:
       return '';
