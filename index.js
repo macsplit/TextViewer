@@ -58,7 +58,20 @@ function detect(mime, ext) {
 
   switch (ext) {
     case 'cpp':
+    case 'hpp':
       return 'cpp';
+    case 'cs':
+      return 'csharp';
+    case 'css':
+      return 'css';
+    case 'diff':
+      return 'diff';
+    case 'go':
+      return 'go';
+    case 'graphql':
+      return 'graphql';
+    case 'ini':
+      return 'ini';
     case 'html':
       return 'html';
     case 'java':
@@ -67,18 +80,41 @@ function detect(mime, ext) {
       return 'javascript';
     case 'json':
       return 'json';
+    case 'kt':
+      return 'kotlin';
+    case 'less':
+      return 'less';
     case 'lua':
       return 'lua';
+    case 'm':
+      return 'objectivec';
     case 'md':
       return 'markdown';
     case 'php':
       return 'php';
+    case 'pl':
+      return 'perl';
     case 'py':
       return 'python';
+    case 'r':
+      return 'r';
+    case 'rb':
+      return 'ruby';
+    case 'rs':
+      return 'rust';
+    case 'scss':
+      return 'scss';
     case 'sh':
-      return 'shell';
+      return 'bash';
     case 'sql':
       return 'sql';
+    case 'ts':
+      return 'typescript';
+    case 'xml':
+      return 'xml';
+    case 'yaml':
+    case 'yml':
+      return 'yaml';
     case 'txt':
     default:
   }
