@@ -4,4 +4,6 @@ Simple HTML / Javascript to view a source text file. File can be uploaded and do
 
 Syntax highlighting is provided by [highlight.js](https://highlightjs.org/).
 
+[Working demo](https://leehanke.freeshell.net/text-viewer/)
+
 ![Screenshot](https://raw.githubusercontent.com/macsplit/text-viewer/main/Screenshot_20221025_171840.png)
